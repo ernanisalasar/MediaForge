@@ -1,0 +1,42 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+build/
+dist/
+*.egg-info/
+*.part
+*.bak
+*.exe
+*.dll
+*.pyd
+*.zip
+*.whl
+*.sqlite
+*.sqlite3
+*.db
+*.dmp
+*.dump
+*.core
+*.toc
+*.manifest
+warn-*.txt
+
+# Local IDE and workspace settings
+.vscode/
+.idea/
+*.code-workspace
+*.sublime-workspace
+
+# Configurações locais e segredos (arquivos de exemplo permanecem versionáveis)
+.env
+.env.*
+!.env.example
+!.env.template
+
+# Logs e arquivos temporários locais
+*.log
+logs/
+tmp/
+temp/
+*.tmp

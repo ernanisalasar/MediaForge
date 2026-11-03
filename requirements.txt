@@ -1,0 +1,10 @@
+PySide6-Essentials>=6.6
+brotli; implementation_name == 'cpython' and sys_platform != 'ios'
+brotlicffi; implementation_name != 'cpython'
+certifi>=2026.10.19
+pycryptodomex
+requests>=2.32.2,<3
+urllib3>=2.0.2,<3
+websockets>=13.0
+yt-dlp==2026.10.26
+yt-dlp-ejs==0.8.0

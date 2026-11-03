@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mediaforge-local"
+version = "0.1.0"
+description = "Downloader autorizado e conversor de mídia local para Windows (PySide6 + FFmpeg)"
+readme = "README.md"
+authors = [{name = "Ernani Salasar"}]
+license = {text = "MIT"}
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+]
+requires-python = ">=3.11"
+dependencies = [
+    "PySide6-Essentials>=6.6",
+    "brotli; implementation_name == 'cpython' and sys_platform != 'ios'",
+    "brotlicffi; implementation_name != 'cpython'",
+    "certifi>=2026.10.19",
+    "pycryptodomex",
+    "requests>=2.32.2,<3",
+    "urllib3>=2.0.2,<3",
+    "websockets>=13.0",
+    "yt-dlp==2026.10.26",
+    "yt-dlp-ejs==0.8.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+build = ["pyinstaller>=6.15.0"]
+
+[project.scripts]
+mediaforge = "mediaforge.app:main"
+
+[tool.setuptools.packages.find]
+include = ["mediaforge*"]
+
+[tool.setuptools.package-data]
+"mediaforge.ui" = ["assets/*.svg"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
